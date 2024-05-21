@@ -10,7 +10,7 @@ const listingSchema = new Schema({
     image: {
         type: String,
         default: "https://www.istockphoto.com/signature/photo/modern-luxury-house-with-private-infinity-pool-in-dusk-gm1319453433-406317068",
-        set: (v) => typeof v === 'string' && v !== "" ? v : "https://www.istockphoto.com/signature/photo/modern-luxury-house-with-private-infinity-pool-in-dusk-gm1319453433-406317068",
+        set: (v) => typeof v === 'string' && v.trim() !== "" ? v.trim() : "https://www.istockphoto.com/signature/photo/modern-luxury-house-with-private-infinity-pool-in-dusk-gm1319453433-406317068",
     },
     price: Number,
     location: String,

@@ -99,3 +99,65 @@
     height: 58vh;
     border-radius: 50%;
 }
+
+.contactform{
+    padding: 0 34px;
+    padding-top: 50px;
+    font-family: 'Fira Sans', sans-serif;
+}
+ 
+.contactform h1{
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+.contactform form div{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 10px;
+}
+
+#emailHelp{
+    font-size: 15px;
+    color: midnightblue;
+    margin: 0 5px;
+}
+
+.form-check {
+    /* display: flex!important; */
+    flex-direction: row!important;
+    /* margin-bottom: 1rem; */
+}
+
+.form-check-input {
+    width: 50px!important;
+    height: 20px!important;
+    cursor: pointer!important;
+}
+
+.form-check-label {
+    margin-top: 0.5rem!important;
+    font-size: 16px!important;
+    cursor: pointer!important;
+}
+
+.btn-primary{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    background-color: #0056b3;
+}

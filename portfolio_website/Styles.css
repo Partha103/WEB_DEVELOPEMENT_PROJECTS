@@ -156,8 +156,94 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .btn-primary:hover{
     background-color: #0056b3;
+}
+
+.blogItem{
+    margin: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.blogContainer h1{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 23px;
+}
+
+.blogItem p{
+    font-family: 'Source Code Pro', monospace;
+    opacity: 80%;
+}
+
+.intro h2{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 15px;
+}
+
+.intro p{
+    font-family: 'Source Code Pro', monospace;
+    margin: 15px;
+}
+
+.skillcontainer{
+    padding: 12px;
+}
+
+.skillItem{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    margin: 15px;
+    font-weight: 800;
+}
+
+.skill{
+    height: 15px;
+    background-color: rgb(167, 35, 255);
+    border: 1px solid;
+}
+
+.java{
+    width: 35vw;
+    background-color: #ffc400;
+    max-width: 100vw;
+}
+
+.py{
+    width: 27vw;
+    background-color: #5900ffc5;
+    max-width: 100vw;
+}
+
+.dsa{
+    width: 40vw;
+    background-color: #04ebd7;
+    max-width: 100vw;
+}
+
+.wd{
+    width: 40vw;
+    background-color: #333;
+    max-width: 100vw;
+}
+
+.c{
+    width: 50vw;
+    /* background-color: #ffc400; */
+    max-width: 100vw;
+}
+
+.sql{
+    width: 38vw;
+    background-color: #00758f;
+    max-width: 100vw;
+}
+
+.aiml{
+    width: 25vw;
+    max-width: 100vw;
+    background-color: #47ff2f;
 }

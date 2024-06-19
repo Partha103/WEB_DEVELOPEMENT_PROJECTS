@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parthasarathi Singh - Web Developer, Java & Python Programmer</title>
+    <title>Parthasarathi Singh - Contact</title>
     <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
@@ -11,6 +11,7 @@
         <div class="sidebar">
             <nav>
                 <ul>
+                    <li><div class="logo">Portfolio</div></li>
                     <li><a href="/">Home</a></li>
                     <li><a href="/intro.html">My Intro</a></li>
                     <li><a href="/services.html">Services</a></li>
@@ -21,29 +22,28 @@
         </div>
         <div class="main">
             <div class="contactform">
-                <h1>Contact me for work/general Enquiries</h1>
-                <br>
+                <h1>Contact me for work/general enquiries</h1>
                 <form>
                     <div class="mb-3">
                       <label for="clientName" class="form-label">Name</label>
-                      <input type="name" class="form-control" id="clientName" aria-describedby="emailHelp">
+                      <input type="text" class="form-control" id="clientName">
                     </div>
                     <div class="mb-3">
-                      <label for="clientEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="clientEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your Email & Phone with anyone else.</div>
+                      <label for="clientEmail" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="clientEmail">
+                      <div id="emailHelp" class="form-text">We'll never share your email & phone with anyone else.</div>
                     </div>
                     <div class="mb-3">
                       <label for="clientPhone" class="form-label">Phone</label>
-                      <input type="phone" class="form-control" id="clientPhone">
+                      <input type="tel" class="form-control" id="clientPhone">
                     </div>
                     <div class="mb-3">
-                        <label for="clientName" class="form-label">Enquiries</label>
-                        <input type="name" class="form-control" id="clientName" aria-describedby="emailHelp">
-                      </div>
-                    <div class="mb-3" id="form-check">
-                      <input type="checkbox" class="form-check-input" id="isclient">
-                      <label class="form-check-label" for="isclient">I want you to work on a Project with me</label>
+                        <label for="clientEnquiry" class="form-label">Enquiry</label>
+                        <textarea class="form-control" id="clientEnquiry" rows="4"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="isClient">
+                      <label class="form-check-label" for="isClient">I want you to work on a project with me</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

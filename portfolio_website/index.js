@@ -1,27 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const sidebar = document.querySelector('.sidebar');
-    const menuIcon = document.createElement('div');
-    menuIcon.classList.add('menu-icon');
-    menuIcon.innerHTML = '&#9776;'; // Unicode for menu icon (hamburger icon)
-    document.body.appendChild(menuIcon);
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
 
-    menuIcon.addEventListener('click', function() {
-        if (sidebar.style.transform === 'translateY(0%)') {
-            sidebar.style.transform = 'translateY(-100%)';
-        } else {
-            sidebar.style.transform = 'translateY(0%)';
-        }
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form values
+        const clientName = document.getElementById('clientName').value;
+        const clientEmail = document.getElementById('clientEmail').value;
+        const clientPhone = document.getElementById('clientPhone').value;
+        const clientEnquiry = document.getElementById('clientEnquiry').value;
+        const isClientChecked = document.getElementById('isclient').checked;
+
+        // Get the label text for the checkbox
+        const isClientLabel = document.querySelector('label[for="isclient"]').innerText;
+
+        // Prepare the data to send
+        const templateParams = {
+            clientName: clientName,
+            clientEmail: clientEmail,
+            clientPhone: clientPhone,
+            clientEnquiry: clientEnquiry,
+            isClient: isClientChecked ? isClientLabel : 'No',
+            to_email: 'pssingh050205@gmail.com' // Your email address
+        };
+
+        // Send the email
+        emailjs.send('service_1g0bl1s', 'template_zwmkgx6', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your message has been sent!');
+                form.reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('There was a problem sending your message. Please try again later.');
+            });
     });
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 830) {
-            sidebar.style.transform = 'translateY(0%)';
-        } else {
-            sidebar.style.transform = 'translateY(-100%)';
-        }
-    });
-
-    if (window.innerWidth < 830) {
-        sidebar.style.transform = 'translateY(-100%)';
-    }
 });

@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parthasarathi Singh - Contact</title>
+    <title>Parthasarathi Singh - Web Developer, Java & Python Programmer</title>
     <link rel="stylesheet" href="Styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("iSrnGDWX_uTPtmkI9"); // Replace with your EmailJS user ID
+        })();
+    </script>
 </head>
 <body>
     <div class="container">
@@ -22,33 +28,35 @@
         </div>
         <div class="main">
             <div class="contactform">
-                <h1>Contact me for work/general enquiries</h1>
-                <form>
+                <h1>Contact me for work/general Enquiries</h1>
+                <br>
+                <form id="contact-form">
                     <div class="mb-3">
                       <label for="clientName" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="clientName">
+                      <input type="name" class="form-control" id="clientName" name="clientName" required>
                     </div>
                     <div class="mb-3">
                       <label for="clientEmail" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="clientEmail">
-                      <div id="emailHelp" class="form-text">We'll never share your email & phone with anyone else.</div>
+                      <input type="email" class="form-control" id="clientEmail" name="clientEmail" required>
+                      <div id="emailHelp" class="form-text">We'll never share your Email & Phone with anyone else.</div>
                     </div>
                     <div class="mb-3">
                       <label for="clientPhone" class="form-label">Phone</label>
-                      <input type="tel" class="form-control" id="clientPhone">
+                      <input type="phone" class="form-control" id="clientPhone" name="clientPhone" required>
                     </div>
                     <div class="mb-3">
-                        <label for="clientEnquiry" class="form-label">Enquiry</label>
-                        <textarea class="form-control" id="clientEnquiry" rows="4"></textarea>
+                        <label for="clientEnquiry" class="form-label">Enquiries</label>
+                        <input type="text" class="form-control" id="clientEnquiry" name="clientEnquiry" required>
                     </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="isClient">
-                      <label class="form-check-label" for="isClient">I want you to work on a project with me</label>
+                    <div class="mb-3" id="form-check">
+                      <input type="checkbox" class="form-check-input" id="isclient" name="isclient">
+                      <label class="form-check-label" for="isclient">I want you to work on a Project with me</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

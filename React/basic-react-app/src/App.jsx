@@ -1,13 +1,15 @@
 import './App.css'
 import Title from './Title'
+import MsgBox from './MsgBox';
 
 function App() {
   return (
-    <div>
+    <>
       <Title />
+      <MsgBox userName="Partha" textColor="yellow" />
       <button>Hello World</button>
-    </div>
-  )
+    </>
+  );
 }
 
 export default App

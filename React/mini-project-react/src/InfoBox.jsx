@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import * as React from 'react';
 import Card from '@mui/material/Card';
@@ -8,24 +9,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './InfoBox.css';
 
-export default function InfoBox() {
-    let info = {
-        name: "Delhi",
-        country: "India",
-        temp: 30,
-        humidity: 50,
-        pressure: 1000,
-        weather: "Sunny"
-    };
-    
+export default function InfoBox({ info }) {
   return (
     <div className='InfoBox'>
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {info.name} of {info.country}
@@ -37,9 +24,6 @@ export default function InfoBox() {
             <p>Now, the Weather can be described as <i>{info.weather}</i></p>
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-      </CardActions>
     </Card>
     </div>
   );
